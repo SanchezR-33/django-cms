@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--
+Au<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!--
+Django CMS Themes at django-cms-themes.com, 
+Copyright (c) 2017 Nuwa Information Co., Ltd, All Rights Reserved.
+
+Licensed under the license you purchased,
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at our web site.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+  <head>
+    {% load cms_tags menu_tags sekizai_tags static %}{% with '' as CMS_STATIC_DIR %}
+    <!--
+    CMS page attribute
+    Slug: {% page_attribute 'slug' %}
+    Changed_date: {% page_attribute 'changed_date' %}
+    Changed_by: {% page_attribute 'changed_by' %}
+    -->
+    
+    <script>var CMS_STATIC = "{% static '' %}";</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Workaround for fixing Django CMS issues-->
+    <script src="js/FixTemplate.js"></script>
+    <meta name="comment" content="The template was modified by Nuwainfo.com">
+    <meta name="description" content="{% page_attribute 'meta_description' %}">
+    <title>{% page_attribute 'page_title' %}</title>
+    <link href="{% static CMS_STATIC_DIR|add:'css/bootstrap.css' %}" media="all" rel="stylesheet" type="text/css">
+    <link href="{% static CMS_STATIC_DIR|add:'css/style.css' %}" media="all" rel="stylesheet" type="text/css">
+    <link href="{% static CMS_STATIC_DIR|add:'css/chocolat.css' %}" media="screen" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="Emplox Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" name="keywords">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="{% static CMS_STATIC_DIR|add:'js/jquery-1.11.1.min.js' %}"></script>
+    <!--<link href="css/flexslider.css" media="screen" rel="stylesheet" type="text/css">-->
+    <!--scrolling-->
+    <script src="{% static CMS_STATIC_DIR|add:'js/move-top.js' %}" type="text/javascript"></script>
+    <script src="{% static CMS_STATIC_DIR|add:'js/easing.js' %}" type="text/javascript"></script>
+    <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+    <!--scrolling-->
+    {% endwith %}{% render_block 'css' %}
+  </head>
+  <body>
+    {% cms_toolbar %}{% with '' as CMS_STATIC_DIR %}
+    <!--top-header-->
+    <div class="top-header" id="home">
+      <div class="container">
+        <div class="logo">
+          <h1>
+            {% placeholder 'index-h1-1' %}
+          </h1>
+        </div>
+        <div class="top-menu">
+          <span class="menu">
+            {% placeholder 'index-span-1' %}
+          </span>
+          {% placeholder 'index-ul-1' %}
+          <!-- script-for-menu -->
+          <script>					
+							$("span.menu").click(function(){
+								$(".top-menu ul").slideToggle("slow" , function(){
+								});
+							});
+				 </script>
+          <!-- script-for-menu -->
+        </div>
+      </div>
+    </div>
+    <!--header-->
+    <div class="header">
+      <div class="container">
+        <div class="banner-info">
+          <h2>{% placeholder 'index-h2-1' %}</h2>
+          {% placeholder 'index-p-1' %}
+				 {% placeholder 'index-a-8' %}
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!--Service-->
+    <div class="service" id="service">
+      <div class="container">
+        <h3>{% placeholder 'index-h3-1' %}</h3>
+        <div class="service-grids">
+          <div class="icon-grids">
+            <div class="col-md-6 futr-grid futr1">
+              <div class="icon-pic">
+                <div class="icon text-center">
+                  <span aria-hidden="true" class="glyphicon glyphicon-phone">{% placeholder 'index-span-2' %}</span>
+                </div>
+              </div>
+              <div class="icon-info">
+                <h4>
+                  {% placeholder 'index-h4-1' %}
+                </h4>
+                {% placeholder 'index-p-2' %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="col-md-6 futr-grid">
+              <div class="icon-pic">
+                <div class="icon text-center">
+                  <span aria-hidden="true" class="glyphicon glyphicon-thumbs-up">{% placeholder 'index-span-3' %}</span>
+                </div>
+              </div>
+              <div class="icon-info">
+                <h4>
+                  {% placeholder 'index-h4-2' %}
+                </h4>
+                {% placeholder 'index-p-3' %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="icon-grids grids2">
+            <div class="col-md-6 futr-grid futr1">
+              <div class="icon-pic">
+                <div class="icon text-center">
+                  <span aria-hidden="true" class="glyphicon glyphicon-picture">{% placeholder 'index-span-4' %}</span>
+                </div>
+              </div>
+              <div class="icon-info">
+                <h4>
+                  {% placeholder 'index-h4-3' %}
+                </h4>
+                {% placeholder 'index-p-4' %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="col-md-6 futr-grid">
+              <div class="icon-pic">
+                <div class="icon text-center">
+                  <span aria-hidden="true" class="glyphicon glyphicon-user">{% placeholder 'index-span-5' %}</span>
+                </div>
+              </div>
+              <div class="icon-info">
+                <h4>
+                  {% placeholder 'index-h4-4' %}
+                </h4>
+                {% placeholder 'index-p-5' %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--about-->
+    <div class="about" id="about">
+      <div class="about-left"></div>
+      <div class="about-right">
+        <h3>{% placeholder 'index-h3-2' %}</h3>
+        <h4>{% placeholder 'index-h4-5' %}</h4>
+        {% placeholder 'index-p-6' %}
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!--gallery -->
+    <script src="{% static CMS_STATIC_DIR|add:'js/jquery.chocolat.js' %}"></script>
+    <!--light-box-files -->
+    <script type="text/javascript">
+		$(function() {
+			$('.moments-bottom a').Chocolat();
+		});
+		</script>
+    <!--gallery js-->
+    <div class="gallery" id="gallery">
+      <div class="container">
+        <h3>{% placeholder 'index-h3-3' %}</h3>
+        <div class="gallery-info">
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-13' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-14' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-15' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-16' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-17' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-18' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-19' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-20' %}
+          </div>
+          <div class="col-md-4 galry-grids moments-bottom">
+            {% placeholder 'index-a-21' %}
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <div class="blog" id="blog">
+      <div class="container">
+        <h3>{% placeholder 'index-h3-4' %}</h3>
+        <div class="blog-grids">
+          <div class="col-md-6 blog-grid">
+            {% placeholder 'index-a-22' %}
+            <h4>
+              {% placeholder 'index-h4-6' %}
+            </h4>
+            <span>{% placeholder 'index-span-15' %}</span>
+            {% placeholder 'index-p-7' %}
+          </div>
+          <div class="col-md-6 blog-grid">
+            {% placeholder 'index-a-24' %}
+            <h4>
+              {% placeholder 'index-h4-7' %}
+            </h4>
+            <span>{% placeholder 'index-span-16' %}</span>
+            {% placeholder 'index-p-8' %}
+          </div>
+          <div class="clearfix"></div>
+          <div class="middleblog-grid blog-grid">
+            {% placeholder 'index-a-26' %}
+            <h4>
+              {% placeholder 'index-h4-8' %}
+            </h4>
+            <span>{% placeholder 'index-span-17' %}</span>
+            {% placeholder 'index-p-9' %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6632.248000703498!2d151.265683!3d-33.7832959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12abc7edcbeb07%3A0x5017d681632bfc0!2sManly+Vale+NSW+2093%2C+Australia!5e0!3m2!1sen!2sin!4v1433329298259" style="border:0"></iframe>
+    </div>
+    <!---->
+    <div class="contact" id="contact">
+      <div class="container">
+        <h3>{% placeholder 'index-h3-5' %}</h3>
+        <div class="touch-top">
+          <div class="col-md-8 touch-left">
+            {% placeholder 'index-form-1' %}
+          </div>
+          <div class="col-md-4 touch-right">
+            <div class="touch-right-top">
+              <span class="add">{% placeholder 'index-span-18' %}</span>
+              <h4>
+                {% placeholder 'index-h4-9' %}
+              </h4>
+            </div>
+            <div class="touch-right-top">
+              <span class="mail">{% placeholder 'index-span-19' %}</span>
+              {% placeholder 'index-p-10' %}
+            </div>
+            <div class="touch-right-top">
+              <span class="num">{% placeholder 'index-span-20' %}</span>
+              {% placeholder 'index-p-11' %}
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        {% placeholder 'index-p-12' %}
+        <div class="social">
+          {% placeholder 'index-a-30' %}
+				{% placeholder 'index-a-31' %}
+				{% placeholder 'index-a-32' %}	
+				{% placeholder 'index-a-33' %}	
+				{% placeholder 'index-a-34' %}
+        </div>
+        <div class="arrow">
+          {% placeholder 'index-a-35' %}
+        </div>
+      </div>
+    </div>
+    <!---->
+    <script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+    {% placeholder 'index-a-36' %}
+    <!---->
+    <div class="_cmsCollection"></div>
+    {% endwith %}{% render_block 'js' %}
+    <!--
+    This iframe is used for tracking the theme usage only to help us improve our product.
+    It is safe and we will remove it after beta testing.
+    If you don't like it, please remove it freely. Thanks.
+    -->
+    {% include '_tracking.html' with upc='7ab58b3476e49f65ea450aac00bdbf79' complexity='61' %}
+  </body>
+</html>
